@@ -32,16 +32,17 @@
             <div class="banner__2">
             </div>
             <div class="articles-by-tags">
-                <comp-article></comp-article>
+                <comp-article :articles="articles"></comp-article>
                 <div class="articles-by-tags__tags-block">
                     <h4 class="articles-by-tags__heading">Tags</h4>
-                    <div class="articles-by-tags__buttons-block"></div>
-                    <button class="articles-by-tags__button-tags">Kitchen</button>
-                    <button class="articles-by-tags__button-tags">Bedroom</button>
-                    <button class="articles-by-tags__button-tags">Building</button>
-                    <button class="articles-by-tags__button-tags">Architecture</button>
-                    <button class="articles-by-tags__button-tags">Kitchen Planning</button>
-                    <button class="articles-by-tags__button-tags">Bedroom</button>
+                    <div class="articles-by-tags__buttons-block">
+                        <button class="articles-by-tags__button-tags" @click="sortByTags('Kitchen')">Kitchen</button>
+                        <button class="articles-by-tags__button-tags" @click="sortByTags('Bedroom')">Bedroom</button>
+                        <button class="articles-by-tags__button-tags">Building</button>
+                        <button class="articles-by-tags__button-tags">Architecture</button>
+                        <button class="articles-by-tags__button-tags">Kitchen Planning</button>
+                        <button class="articles-by-tags__button-tags">Bathroom</button>
+                    </div>
                 </div>
             </div>
             <div class="footer">
@@ -87,6 +88,7 @@
     </div>
     <script src="comp-article.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>
