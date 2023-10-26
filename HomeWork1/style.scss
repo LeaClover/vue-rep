@@ -1,4 +1,4 @@
-﻿* {
+* {
     margin: 0;
     padding: 0;
 }
@@ -744,6 +744,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-between;
     width: 1200px;
     gap: 57px;
 
@@ -768,10 +769,27 @@ a {
         font-weight: 400;
         line-height: 125%;
         letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    &__heading {
+        color: #292F36;
+        font-family: 'DM Serif Display';
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 0.5px;
+        margin-bottom: 24px;
     }
 
     &__dp-block {
         display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 430px;
+        margin-top: 11px;
+        margin-bottom: 48px;
     }
 
     &__date-path {
@@ -793,6 +811,7 @@ a {
         font-weight: 400;
         line-height: 150%;
         letter-spacing: 0.22px;
+        margin-bottom: 35px;
     }
 
     &__callout-block {
@@ -808,6 +827,7 @@ a {
         position: relative;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 27px;
     }
 
     &__callout-one {
@@ -836,5 +856,91 @@ a {
         letter-spacing: 0.5px;
         padding-top: 90px;
         width: 355px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none; 
+        counter-reset: my-counter;
+        gap: 32px;
+        margin-bottom: 44px;
+    }
+
+    &__list-item {
+        list-style-position: inside;
+        color: #4D5053;
+        font-family: 'Jost';
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.22px;
+        width: 790px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    &__list-item::before {
+        content: counter(my-counter);
+        counter-increment: my-counter; 
+        color: #CDA274; 
+        margin-right: 14px;
+        font-family: DM Serif Display;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 0.4px;
+        display: flex;
+        gap: 32px;
+    }
+
+    &__tags-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        width: 345px;
+    }
+
+    &__heading {
+        color: #292F36;
+        font-family: 'DM Serif Display';
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 0.5px;
+    }
+
+    &__buttons-block {
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        width: 335px;
+        flex-wrap: wrap;
+    }
+
+    &__button-tags {
+        border-radius: 10px;
+        background: #F4F0EC;
+        padding: 9px 30px;
+        border: none;
+        color: #292F36;
+        text-align: center;
+        font-family: 'Jost';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 0.36px;
+        cursor: pointer;
+    }
+
+    img {
+        margin-bottom: 35px;
     }
 }
